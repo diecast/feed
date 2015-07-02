@@ -1,0 +1,18 @@
+[package]
+name = "diecast-feed"
+version = "0.1.0"
+authors = ["Jorge Israel Peña <jorge.israel.p@gmail.com>"]
+
+[dependencies.rss]
+version = "*"
+optional = true
+
+[dependencies.atom_syndication]
+version = "*"
+optional = true
+
+[dependencies.diecast]
+path = "../diecast"
+
+[features]
+"atom" = ["atom_syndication"]
