@@ -35,10 +35,11 @@ where H: Fn(&str, &str, &Bind) -> Vec<rss_::Item> {
         };
 
         let mut item = Item::writing(self.path.clone());
-        item.body = rss_::Rss(channel).to_string();
+        // TODO
+        // make it possible to leverage versions::load?
+        item.body = channel.to_string();
         bind.attach(item);
 
         Ok(())
     }
 }
-
